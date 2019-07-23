@@ -1,0 +1,52 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Akash Eye Care</title>
+</head>
+<body bgcolor="gray">
+    <form id="form1" runat="server">
+    <div>
+    <center><h1><font color="lime"><asp:Image ID="image1" runat="server" ImageUrl="~/A2.jpg" Height="50" Width="30" />
+    AKASH EYE CARE
+    <asp:Image ID="image2" runat="server" ImageUrl="~/A2.jpg" Height="50" Width="30" />
+    </font></h1></center>
+    </div>
+    <div>
+        <asp:menu ID="Menu1" runat="server" Orientation="Horizontal" BackColor="#B5C7DE" ForeColor="#284E98" Font-Size="1.0em" DynamicHorizontalOffset="2" Font-Names="Verdana" StaticSubMenuIndent="10px">
+        <Items>
+            <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/Home.aspx"></asp:MenuItem>
+            
+            <asp:MenuItem Text="Patient" Value="Patient">
+                <asp:MenuItem Text="Patient Details" Value="Patient Details" NavigateUrl="~/patient_details.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Print Prescription" Value="Print Prescription" NavigateUrl="~/Print_prescription.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Search Patient" Value="Search Patient" NavigateUrl="~/Search_Patient.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Update Details" Value="Update Details" NavigateUrl="~/update_patient_details.aspx"></asp:MenuItem>
+            </asp:MenuItem>
+            
+        <asp:MenuItem Text="Bill" Value="Bill">
+            <asp:MenuItem Text="Cash Receipt" Value="Cash Receipt" NavigateUrl="~/cash_receipt.aspx"></asp:MenuItem>
+            <asp:MenuItem Text="Print Receipt" Value="Print Receipt" NavigateUrl="~/Receipt_Print.aspx"></asp:MenuItem>
+            <asp:MenuItem Text="Search Bill" Value="Search Bill" NavigateUrl="~/Search_Bill.aspx"></asp:MenuItem>
+            <asp:MenuItem Text="Update Bill" Value="Update Bill" NavigateUrl="~/Update_Bill.aspx"></asp:MenuItem>
+            <asp:MenuItem Text="Extra Charge" Value="Extra Charge" NavigateUrl="~/extra_charged.aspx"></asp:MenuItem>
+        </asp:MenuItem>
+        
+        </Items>
+            <StaticSelectedStyle BackColor="#507CD1" />
+            <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+            <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
+            <DynamicMenuStyle BackColor="#B5C7DE" />
+            <DynamicSelectedStyle BackColor="#507CD1" />
+            <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+            <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
+        </asp:menu>
+        <hr />
+        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+        </asp:contentplaceholder>
+    </div>
+    </form>
+</body>
+</html>
