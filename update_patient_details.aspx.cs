@@ -55,6 +55,7 @@ public partial class update_patient_details : System.Web.UI.Page
         {
             msc.Close();
         }
+
         if (Page.IsPostBack == false)
         {
             //FOR RETRIEVING DOCTOR DETAILS
@@ -76,7 +77,7 @@ public partial class update_patient_details : System.Web.UI.Page
             }
             catch (Exception evt)
             {
-                Label7.Text = "error db" + evt.ToString();
+                Label7.Text = "error fetching dr_details" + evt.ToString();
             }
             finally
             {

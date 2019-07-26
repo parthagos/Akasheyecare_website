@@ -47,10 +47,10 @@ public partial class patient_details : System.Web.UI.Page
 
         //LOADING DOCTOR'S DETAILS
 
-       /* try
+        try
         {
             DropDownList2.Items.Clear();
-            DropDownList2.Text = "Select Doctor's Name";
+            
             msc.Open();
             string fetch2 = "select dr_name from akasheyecare.doctor_details order by dr_name asc";
             MySqlCommand cmd3 = new MySqlCommand(fetch2, msc);
@@ -61,18 +61,22 @@ public partial class patient_details : System.Web.UI.Page
             da.Fill(ds);
             for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
             {
+                DropDownList2.Items.Add("Select Doctor's Name");
                 DropDownList2.Items.Add(ds.Tables[0].Rows[i][0].ToString());
+                
             }
         }
         catch (Exception evt)
         {
-            Label8.Text = "error db" + evt.ToString();
+            Label8.Text = "error fetching doctor details" + evt.ToString();
         }
         finally
         {
             msc.Close();
+            //DropDownList2.Text = "Select Doctor's Name";
+           
         }
-        */
+        
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
@@ -134,9 +138,9 @@ public partial class patient_details : System.Web.UI.Page
             TextBox5.Text = "";
             DropDownList2.Text = "";
         }
-        catch //(MySqlException evt)
+        catch (MySqlException evt)
         {
-            Label8.Text = "Error in inserting Data to Server"; //+ evt.ToString();
+            Label8.Text = "Error in inserting Data to Server" + evt.ToString();
         }
         finally
         {

@@ -15,6 +15,7 @@ using CrystalDecisions.Shared;
 using CrystalDecisions.CrystalReports.Engine;
 using CrystalDecisions.ReportSource;
 using CrystalDecisions.Web.Services;
+//using CrystalDecisions.ReportAppServer.ReportDefModel;
 
 public partial class cash_receipt : System.Web.UI.Page
 {
@@ -144,6 +145,7 @@ public partial class cash_receipt : System.Web.UI.Page
                 dscmd.Fill(ds, "bill_patient_details");
                 ReportDocument prt = new ReportDocument();
                 prt.Load(Server.MapPath("cash_memo_print.rpt"));
+            
 
                 prt.SetDataSource(ds.Tables["bill_patient_details"]);
                 //crystalReportViewer1.ReportSource = prt;
