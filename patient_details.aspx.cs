@@ -97,7 +97,7 @@ public partial class patient_details : System.Web.UI.Page
             cmd.Parameters.AddWithValue("@sex", DropDownList1.Text);
             cmd.Parameters.AddWithValue("@address", TextBox4.Text);
             cmd.Parameters.AddWithValue("@ph_no", TextBox5.Text);
-            cmd.Parameters.AddWithValue("@dr_name", DropDownList2.Text);
+            cmd.Parameters.AddWithValue("@dr_name", DropDownList2.SelectedItem.Text);
             cmd.Parameters.AddWithValue("@date", System.DateTime.Today);
             cmd.ExecuteNonQuery();
             //msc.Close();

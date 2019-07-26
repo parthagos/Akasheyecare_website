@@ -19,8 +19,8 @@ using CrystalDecisions.Web.Services;
 public partial class Print_prescription : System.Web.UI.Page
 {
     MySqlConnection msc = new MySqlConnection();
-    System.Drawing.Printing.PrinterSettings ps;
-    System.Drawing.Printing.PageSettings pseting;
+    //System.Drawing.Printing.PrinterSettings ps;
+    //System.Drawing.Printing.PageSettings pseting;
 
     //string path = ConfigurationManager.AppSettings["CrystalReport_prescription"].ToString();
    
